@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Climate Agriculture Dashboard</title>
+    <link rel="stylesheet" href="assets/palette.css">
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -11,7 +12,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f0f0f0;
+            background-color: var(--ui-background, #f0f0f0);
         }
         .container {
             display: flex;
@@ -40,17 +41,17 @@
             margin-bottom: 25px;
         }
         h1 {
-            color: #333;
+            color: var(--ui-text-primary, #333);
             margin-top: 0;
             font-size: 22px;
-            border-bottom: 3px solid #1a9641;
+            border-bottom: 3px solid var(--ui-accent, #0072B2);
             padding-bottom: 10px;
         }
         h2 {
-            color: #333;
+            color: var(--ui-text-primary, #333);
             margin-top: 0;
             font-size: 16px;
-            border-bottom: 2px solid #ddd;
+            border-bottom: 2px solid var(--ui-border-light, #ddd);
             padding-bottom: 8px;
         }
         .legend-item {
@@ -67,23 +68,23 @@
         }
         .description {
             font-size: 12px;
-            color: #666;
+            color: var(--ui-text-tertiary, #666);
             line-height: 1.4;
         }
         .label {
             font-weight: bold;
-            color: #333;
+            color: var(--ui-text-primary, #333);
             font-size: 13px;
         }
         .section-desc {
             font-size: 12px;
-            color: #666;
+            color: var(--ui-text-tertiary, #666);
             margin-bottom: 12px;
             line-height: 1.5;
         }
         ul {
             font-size: 13px;
-            color: #555;
+            color: var(--ui-text-secondary, #555);
             line-height: 1.6;
             padding-left: 20px;
         }
@@ -108,7 +109,7 @@
                 </p>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #d7191c;"></div>
+                    <div class="color-box bg-regime-1"></div>
                     <div>
                         <div class="label">1. Vulnerable</div>
                         <div class="description">Low yields, high climate vulnerability</div>
@@ -116,7 +117,7 @@
                 </div>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #fdae61;"></div>
+                    <div class="color-box bg-regime-2"></div>
                     <div>
                         <div class="label">2. Developing</div>
                         <div class="description">Moderate yields, developing systems</div>
@@ -124,7 +125,7 @@
                 </div>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #a6d96a;"></div>
+                    <div class="color-box bg-regime-3"></div>
                     <div>
                         <div class="label">3. Emerging</div>
                         <div class="description">Good yields, emerging efficiency</div>
@@ -132,7 +133,7 @@
                 </div>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #1a9641;"></div>
+                    <div class="color-box bg-regime-4"></div>
                     <div>
                         <div class="label">4. Efficient</div>
                         <div class="description">High yields, efficient production</div>
@@ -147,32 +148,32 @@
                 </p>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #1f77b4;"></div>
+                    <div class="color-box bg-continent-1"></div>
                     <span class="label">Africa</span>
                 </div>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #ff7f0e;"></div>
+                    <div class="color-box bg-continent-2"></div>
                     <span class="label">Asia</span>
                 </div>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #2ca02c;"></div>
+                    <div class="color-box bg-continent-3"></div>
                     <span class="label">Europe</span>
                 </div>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #d62728;"></div>
+                    <div class="color-box bg-continent-4"></div>
                     <span class="label">North America</span>
                 </div>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #9467bd;"></div>
+                    <div class="color-box bg-continent-5"></div>
                     <span class="label">South America</span>
                 </div>
                 
                 <div class="legend-item">
-                    <div class="color-box" style="background-color: #8c564b;"></div>
+                    <div class="color-box bg-continent-6"></div>
                     <span class="label">Oceania</span>
                 </div>
             </div>
@@ -76806,10 +76807,10 @@
                   "4. Efficient / High-Yield"
                 ],
                 "range": [
-                  "#d7191c",
-                  "#fdae61",
-                  "#a6d96a",
-                  "#1a9641"
+                  "#E69F00",
+                  "#56B4E9",
+                  "#009E73",
+                  "#0072B2"
                 ]
               },
               "title": "Model Regime",
@@ -76873,10 +76874,10 @@
                   "4. Efficient / High-Yield"
                 ],
                 "range": [
-                  "#d7191c",
-                  "#fdae61",
-                  "#a6d96a",
-                  "#1a9641"
+                  "#E69F00",
+                  "#56B4E9",
+                  "#009E73",
+                  "#0072B2"
                 ]
               },
               "type": "nominal"
@@ -76934,10 +76935,10 @@
                   "4. Efficient / High-Yield"
                 ],
                 "range": [
-                  "#d7191c",
-                  "#fdae61",
-                  "#a6d96a",
-                  "#1a9641"
+                  "#E69F00",
+                  "#56B4E9",
+                  "#009E73",
+                  "#0072B2"
                 ]
               },
               "type": "nominal"
@@ -76990,10 +76991,10 @@
                       "4. Efficient / High-Yield"
                     ],
                     "range": [
-                      "#d7191c",
-                      "#fdae61",
-                      "#a6d96a",
-                      "#1a9641"
+                      "#E69F00",
+                      "#56B4E9",
+                      "#009E73",
+                      "#0072B2"
                     ]
                   },
                   "type": "nominal"
@@ -77033,6 +77034,24 @@
                   "field": "Continent",
                   "legend": {
                     "title": "Continent (click to filter)"
+                  },
+                  "scale": {
+                    "domain": [
+                      "Africa",
+                      "Asia",
+                      "Europe",
+                      "North America",
+                      "South America",
+                      "Oceania"
+                    ],
+                    "range": [
+                      "#0072B2",
+                      "#E69F00",
+                      "#009E73",
+                      "#D55E00",
+                      "#CC79A7",
+                      "#F0E442"
+                    ]
                   },
                   "type": "nominal"
                 },

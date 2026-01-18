@@ -1,0 +1,83 @@
+/*
+ * Colorblind-Friendly Color Palette
+ * 
+ * This file defines CSS custom properties (variables) for colorblind-safe colors.
+ * These palettes are designed to be accessible for people with red/green color 
+ * blindness (deuteranopia and protanopia).
+ * 
+ * Based on Okabe-Ito and Paul Tol palettes.
+ */
+
+:root {
+  /* Okabe-Ito Categorical Palette (Primary) */
+  --color-okabe-1: #E69F00;  /* Orange */
+  --color-okabe-2: #56B4E9;  /* Sky Blue */
+  --color-okabe-3: #009E73;  /* Bluish Green */
+  --color-okabe-4: #F0E442;  /* Yellow */
+  --color-okabe-5: #0072B2;  /* Blue */
+  --color-okabe-6: #D55E00;  /* Vermillion */
+  --color-okabe-7: #CC79A7;  /* Reddish Purple */
+  --color-okabe-8: #000000;  /* Black */
+  
+  /* Paul Tol Muted Palette (Secondary, for more subtle colors) */
+  --color-tol-1: #CC6677;  /* Rose */
+  --color-tol-2: #332288;  /* Indigo */
+  --color-tol-3: #DDCC77;  /* Sand */
+  --color-tol-4: #117733;  /* Green */
+  --color-tol-5: #88CCEE;  /* Cyan */
+  --color-tol-6: #882255;  /* Wine */
+  --color-tol-7: #44AA99;  /* Teal */
+  --color-tol-8: #999933;  /* Olive */
+  
+  /* 4-Category Sequential (for Climate Regimes) */
+  --regime-1: #E69F00;  /* Orange - Vulnerable */
+  --regime-2: #56B4E9;  /* Sky Blue - Developing */
+  --regime-3: #009E73;  /* Bluish Green - Emerging */
+  --regime-4: #0072B2;  /* Blue - Efficient */
+  
+  /* 6-Category for Continents */
+  --continent-1: #0072B2;  /* Blue - Africa */
+  --continent-2: #E69F00;  /* Orange - Asia */
+  --continent-3: #009E73;  /* Bluish Green - Europe */
+  --continent-4: #D55E00;  /* Vermillion - North America */
+  --continent-5: #CC79A7;  /* Reddish Purple - South America */
+  --continent-6: #F0E442;  /* Yellow - Oceania */
+  
+  /* UI Colors (neutral, accessible) */
+  --ui-background: #f0f0f0;
+  --ui-background-light: #f9f9f9;
+  --ui-text-primary: #333;
+  --ui-text-secondary: #555;
+  --ui-text-tertiary: #666;
+  --ui-border-light: #ddd;
+  --ui-border-medium: #ccc;
+  --ui-accent: #0072B2;  /* Blue accent instead of green */
+  
+  /* Shadow colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+/* Utility classes for quick color application */
+.color-regime-1 { color: var(--regime-1); }
+.color-regime-2 { color: var(--regime-2); }
+.color-regime-3 { color: var(--regime-3); }
+.color-regime-4 { color: var(--regime-4); }
+
+.bg-regime-1 { background-color: var(--regime-1); }
+.bg-regime-2 { background-color: var(--regime-2); }
+.bg-regime-3 { background-color: var(--regime-3); }
+.bg-regime-4 { background-color: var(--regime-4); }
+
+.color-continent-1 { color: var(--continent-1); }
+.color-continent-2 { color: var(--continent-2); }
+.color-continent-3 { color: var(--continent-3); }
+.color-continent-4 { color: var(--continent-4); }
+.color-continent-5 { color: var(--continent-5); }
+.color-continent-6 { color: var(--continent-6); }
+
+.bg-continent-1 { background-color: var(--continent-1); }
+.bg-continent-2 { background-color: var(--continent-2); }
+.bg-continent-3 { background-color: var(--continent-3); }
+.bg-continent-4 { background-color: var(--continent-4); }
+.bg-continent-5 { background-color: var(--continent-5); }
+.bg-continent-6 { background-color: var(--continent-6); }
